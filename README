@@ -1,0 +1,21 @@
+Pascal UnitTest: Ambiente simples de testes para Free Pascal
+Joao Felipe Nicolaci Pimentel
+
+Fiz este ambiente de testes simples, pois não consegui usar o padrão do Free Pascal, e senti a necessidade de testes para os projetos de Metodos Numericos
+O ambiente foi um pouco baseado no SimpleCTest http://simplectest.sourceforge.net
+
+As Funções Implementadas para testes são:
+-StartTests() : Inicia Ambiente de Testes
+-EndTests() : Finaliza Ambiente de Testes e mata a aplicação
+-TestCase('Nome', @procedure) : Inicia TestCase
+  é o Equivalente a
+   >StartTest('Nome');  
+   >procedure;
+   >EndTest;
+-InitTest('Descricao') : Descricao do Test
+-Assert(boolean) : Verifica se teste passou ou falhou
+  Exemplos: 
+   >Assert(1 = 1);
+   >Assert(FloatEquals(1,1));
+
+Veja exemplos de uso no arquivo TestProgram.pas
